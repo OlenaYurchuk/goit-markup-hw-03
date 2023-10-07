@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
@@ -13,6 +21,25 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1158px;
+}
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.logo {
+  margin-right: 76px;
+}
+
 .logo-link {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
@@ -25,6 +52,21 @@ a {
 
 .colored {
   color: #2e2f42;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0;
+}
+
+.nav-list {
+  display: inline-flex;
+}
+
+.nav-list-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .nav-list-item-link {
@@ -42,6 +84,15 @@ a {
 
 .address {
   font-style: normal;
+  margin-right: 0;
+}
+
+.address-list {
+  display: inline-flex;
+}
+
+.address-list-item:first-child {
+  margin-right: 40px;
 }
 
 .contacts-link {
@@ -56,6 +107,11 @@ a {
   color: #404bbf;
 }
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .preinfo {
   background-color: #2e2f42;
   text-align: center;
@@ -67,6 +123,8 @@ a {
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  width: 496px;
+  margin-bottom: 48px;
 }
 
 .preinfo-button {
@@ -79,6 +137,7 @@ a {
   line-height: 1.5em;
   letter-spacing: 0.04em;
   cursor: pointer;
+  padding: 16px 32px;
 }
 
 .preinfo-button:hover,
@@ -86,8 +145,21 @@ a {
   background-color: #404bbf;
 }
 
+.about-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  row-gap: 24px;
+}
+
 .about-list-item {
   line-height: 1.5em;
+  width: calc((100% - 24px * 3) / 4);
+  margin-left: 0;
+}
+
+.about-list-item:last-child {
+  margin-right: 0;
 }
 
 .about-title {
@@ -95,6 +167,7 @@ a {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .about-text {
@@ -115,10 +188,33 @@ a {
   text-transform: capitalize;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 24px;
 }
 
 .team-list-item {
   background-color: #fff;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc((100% - 24px * 3) / 4);
+}
+
+.team-list-item:last-child {
+  margin-right: 0;
+}
+
+.team-photo {
+  margin-bottom: 32px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .team-list-item-name {
@@ -127,6 +223,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .team-list-item-text {
@@ -144,10 +241,46 @@ a {
   text-transform: capitalize;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-photo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .portfolio-list-item {
   background-color: #fff;
+  row-gap: 24px;
+  width: calc((100% - 24px * 2) / 3);
+}
+
+.portfolio-list-item:nth-child(3),
+.portfolio-list-item:last-child {
+  margin-right: 0;
+}
+
+.portfolio-list-item:first-child,
+.portfolio-list-item:nth-child(4) {
+  margin-left: 0;
+}
+
+.portfolio-list-item:first-child,
+.portfolio-list-item:nth-child(2),
+.portfolio-list-item:nth-child(3) {
+  margin-bottom: 48px;
+}
+
+.portfolio-list-item-content {
+  border: 1px solid #e7e9fc;
+  border-top: 0;
+  padding: 32px 16px;
 }
 
 .portfolio-list-item-text {
@@ -156,6 +289,8 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
+  margin-left: 0;
 }
 
 .portfolio-list-item-description {
@@ -163,10 +298,17 @@ a {
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: 0.02em;
+  margin-left: 0;
 }
 
 .footer {
   background-color: #2e2f42;
+  padding-top: 101.5px;
+  padding-bottom: 100px;
+}
+
+.footer .logo {
+  margin-bottom: 17.5px;
 }
 
 .footer .logo-link {
@@ -186,4 +328,6 @@ a {
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: 0.02em;
+  width: 264px;
+  margin-left: 0;
 }
