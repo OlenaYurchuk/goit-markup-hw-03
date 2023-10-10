@@ -145,9 +145,12 @@ a {
   background-color: #404bbf;
 }
 
+.about-title {
+  display: none;
+}
+
 .about-list {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   row-gap: 24px;
 }
