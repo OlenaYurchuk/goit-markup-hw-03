@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 .container {
   max-width: 1158px;
 }
@@ -32,12 +36,7 @@ a {
 .header .container {
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-.logo {
-  margin-right: 76px;
+  padding: 15px 0;
 }
 
 .logo-link {
@@ -48,6 +47,7 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 
 .colored {
@@ -59,6 +59,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-left: 0;
+  padding: 24px 0;
 }
 
 .nav-list {
@@ -88,7 +89,8 @@ a {
 }
 
 .address-list {
-  display: inline-flex;
+  display: flex;
+  padding: 24px 0;
 }
 
 .address-list-item:first-child {
@@ -115,6 +117,7 @@ a {
 .preinfo {
   background-color: #2e2f42;
   text-align: center;
+  padding: 188px 0;
 }
 
 .preinfo-title {
@@ -123,11 +126,13 @@ a {
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  width: 496px;
+  max-width: 496px;
   margin-bottom: 48px;
 }
 
 .preinfo-button {
+  display: block;
+  min-width: 169px;
   font-family: 'Roboto', sans-serif;
   background-color: #4d5ae5;
   color: #fff;
@@ -139,6 +144,8 @@ a {
   cursor: pointer;
   padding: 16px 32px;
   border: none;
+  border-radius: 4px;
+  margin: 0 auto;
 }
 
 .preinfo-button:hover,
@@ -147,7 +154,17 @@ a {
 }
 
 .about-title {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .about-list {
@@ -198,16 +215,20 @@ a {
 .team-list {
   display: flex;
   justify-content: space-between;
-  row-gap: 24px;
+  gap: 24px;
 }
 
 .team-list-item {
   background-color: #fff;
-  padding-bottom: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: calc((100% - 24px * 3) / 4);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list-item-content {
+  padding: 32px 0;
 }
 
 .team-list-item:last-child {
@@ -215,7 +236,6 @@ a {
 }
 
 .team-photo {
-  margin-bottom: 32px;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -228,6 +248,7 @@ a {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .team-list-item-text {
@@ -235,6 +256,7 @@ a {
   line-height: 1.5em;
   letter-spacing: 0.02em;
   color: #434455;
+  text-align: center;
 }
 
 .portfolio-title {
@@ -251,6 +273,7 @@ a {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  column-gap: 24px;
 }
 
 .portfolio-photo {
@@ -307,20 +330,18 @@ a {
 
 .footer {
   background-color: #2e2f42;
-  padding-top: 101.5px;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.footer .logo {
-  margin-bottom: 17.5px;
-}
-
 .footer .logo-link {
+  display: inline-block;
   color: #f4f4fd;
   font-family: 'Raleway', sans-serif;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #4d5ae5;
+  margin-bottom: 16px;
 }
 
 .footer .colored {
