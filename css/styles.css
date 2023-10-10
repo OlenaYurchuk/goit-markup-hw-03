@@ -31,12 +31,12 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  padding: 15px 0;
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
-  padding: 15px 0;
 }
 
 .logo-link {
@@ -59,7 +59,6 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-left: 0;
-  padding: 24px 0;
 }
 
 .nav-list {
@@ -76,6 +75,7 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding: 24px 0;
 }
 
 .nav-list-item-link:hover,
@@ -153,7 +153,7 @@ img {
   background-color: #404bbf;
 }
 
-.about-title {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -183,7 +183,7 @@ img {
   margin-right: 0;
 }
 
-.about-title {
+.about-list-item-title {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -191,7 +191,7 @@ img {
   margin-bottom: 8px;
 }
 
-.about-text {
+.about-list-item-text {
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #434455;
